@@ -1,0 +1,38 @@
+[2025-05-21T14:05:48.612+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-05-21T14:05:48.629+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: extract_concat_upload_to_gcs.run_etl manual__2025-05-21T14:05:46.476128+00:00 [queued]>
+[2025-05-21T14:05:48.635+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: extract_concat_upload_to_gcs.run_etl manual__2025-05-21T14:05:46.476128+00:00 [queued]>
+[2025-05-21T14:05:48.636+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 2
+[2025-05-21T14:05:48.682+0000] {taskinstance.py:2907} INFO - Executing <Task(PythonOperator): run_etl> on 2025-05-21 14:05:46.476128+00:00
+[2025-05-21T14:05:48.689+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=388) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-21T14:05:48.690+0000] {standard_task_runner.py:72} INFO - Started process 390 to run task
+[2025-05-21T14:05:48.690+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'extract_concat_upload_to_gcs', 'run_etl', 'manual__2025-05-21T14:05:46.476128+00:00', '--job-id', '45', '--raw', '--subdir', 'DAGS_FOLDER/dag_taxi_data_extractor.py', '--cfg-path', '/tmp/tmp7vmqdw21']
+[2025-05-21T14:05:48.692+0000] {standard_task_runner.py:105} INFO - Job 45: Subtask run_etl
+[2025-05-21T14:05:48.770+0000] {task_command.py:467} INFO - Running <TaskInstance: extract_concat_upload_to_gcs.run_etl manual__2025-05-21T14:05:46.476128+00:00 [running]> on host 939a293d2c0e
+[2025-05-21T14:05:48.914+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='extract_concat_upload_to_gcs' AIRFLOW_CTX_TASK_ID='run_etl' AIRFLOW_CTX_EXECUTION_DATE='2025-05-21T14:05:46.476128+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-21T14:05:46.476128+00:00'
+[2025-05-21T14:05:48.915+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2025-05-21T14:05:48.925+0000] {logging_mixin.py:190} INFO - Base directory path /opt/***
+[2025-05-21T14:05:48.925+0000] {logging_mixin.py:190} INFO - CSV folder path: /opt/***/data/csv
+[2025-05-21T14:05:48.928+0000] {logging_mixin.py:190} INFO - CSV list of files: ['green_tripdata_0.csv', 'green_tripdata_1.csv', 'green_tripdata_10.csv', 'green_tripdata_11.csv', 'green_tripdata_12.csv', 'green_tripdata_13.csv', 'green_tripdata_14.csv', 'green_tripdata_15.csv', 'green_tripdata_16.csv', 'green_tripdata_17.csv', 'green_tripdata_18.csv', 'green_tripdata_19.csv', 'green_tripdata_2.csv', 'green_tripdata_20.csv', 'green_tripdata_21.csv', 'green_tripdata_22.csv', 'green_tripdata_23.csv', 'green_tripdata_24.csv', 'green_tripdata_25.csv', 'green_tripdata_26.csv', 'green_tripdata_27.csv', 'green_tripdata_28.csv', 'green_tripdata_29.csv', 'green_tripdata_3.csv', 'green_tripdata_30.csv', 'green_tripdata_31.csv', 'green_tripdata_32.csv', 'green_tripdata_33.csv', 'green_tripdata_34.csv', 'green_tripdata_35.csv', 'green_tripdata_4.csv', 'green_tripdata_5.csv', 'green_tripdata_6.csv', 'green_tripdata_7.csv', 'green_tripdata_8.csv', 'green_tripdata_9.csv']
+[2025-05-21T14:05:48.928+0000] {logging_mixin.py:190} INFO - Reading CSV files...
+[2025-05-21T14:05:49.925+0000] {logging_mixin.py:190} INFO - Concancenate CSV files...
+[2025-05-21T14:05:49.975+0000] {logging_mixin.py:190} INFO - Base directory path /opt/***
+[2025-05-21T14:05:49.975+0000] {logging_mixin.py:190} INFO - JSON folder path: /opt/***/data/json
+[2025-05-21T14:05:49.977+0000] {logging_mixin.py:190} INFO - JSON list of files: ['green_tripdata_36.json', 'green_tripdata_37.json', 'green_tripdata_38.json', 'green_tripdata_39.json', 'green_tripdata_40.json', 'green_tripdata_41.json', 'green_tripdata_42.json', 'green_tripdata_43.json', 'green_tripdata_44.json', 'green_tripdata_45.json', 'green_tripdata_46.json', 'green_tripdata_47.json', 'green_tripdata_48.json', 'green_tripdata_49.json', 'green_tripdata_50.json', 'green_tripdata_51.json', 'green_tripdata_52.json']
+[2025-05-21T14:05:49.978+0000] {logging_mixin.py:190} INFO - Reading JSON files...
+[2025-05-21T14:05:52.865+0000] {logging_mixin.py:190} INFO - Concancenate JSON files...
+[2025-05-21T14:05:52.888+0000] {logging_mixin.py:190} INFO - Concancenate CSV and JSON files...
+[2025-05-21T14:05:58.421+0000] {logging_mixin.py:190} INFO - Saved combined CSV to /opt/***/data/taxi_data.csv
+[2025-05-21T14:05:58.422+0000] {logging_mixin.py:190} INFO - Uploading /opt/***/data/taxi_data.csv to gs://jdeol003-bucket/...
+[2025-05-21T14:06:16.895+0000] {logging_mixin.py:190} INFO - Upload completed.
+[2025-05-21T14:06:16.895+0000] {logging_mixin.py:190} INFO - Uploading /opt/***/data/payment_type.csv to gs://jdeol003-bucket/...
+[2025-05-21T14:06:17.671+0000] {logging_mixin.py:190} INFO - Upload completed.
+[2025-05-21T14:06:17.672+0000] {logging_mixin.py:190} INFO - Uploading /opt/***/data/taxi_zone_lookup.csv to gs://jdeol003-bucket/...
+[2025-05-21T14:06:19.054+0000] {logging_mixin.py:190} INFO - Upload completed.
+[2025-05-21T14:06:19.055+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-05-21T14:06:19.066+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2025-05-21T14:06:19.067+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=extract_concat_upload_to_gcs, task_id=run_etl, run_id=manual__2025-05-21T14:05:46.476128+00:00, execution_date=20250521T140546, start_date=20250521T140548, end_date=20250521T140619
+[2025-05-21T14:06:19.122+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-05-21T14:06:19.134+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-21T14:06:19.187+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

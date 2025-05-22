@@ -1,0 +1,21 @@
+[2025-05-21T15:03:10.438+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-05-21T15:03:10.458+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_gcs_to_bq_loader.load_payment_type_to_bq manual__2025-05-21T15:03:06.019310+00:00 [queued]>
+[2025-05-21T15:03:10.465+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_gcs_to_bq_loader.load_payment_type_to_bq manual__2025-05-21T15:03:06.019310+00:00 [queued]>
+[2025-05-21T15:03:10.466+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2025-05-21T15:03:10.484+0000] {taskinstance.py:2907} INFO - Executing <Task(PythonOperator): load_payment_type_to_bq> on 2025-05-21 15:03:06.019310+00:00
+[2025-05-21T15:03:10.491+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=122) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-21T15:03:10.493+0000] {standard_task_runner.py:72} INFO - Started process 127 to run task
+[2025-05-21T15:03:10.492+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_gcs_to_bq_loader', 'load_payment_type_to_bq', 'manual__2025-05-21T15:03:06.019310+00:00', '--job-id', '51', '--raw', '--subdir', 'DAGS_FOLDER/dag_taxi_data_loader.py', '--cfg-path', '/tmp/tmpn__i6c_8']
+[2025-05-21T15:03:10.495+0000] {standard_task_runner.py:105} INFO - Job 51: Subtask load_payment_type_to_bq
+[2025-05-21T15:03:10.557+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_gcs_to_bq_loader.load_payment_type_to_bq manual__2025-05-21T15:03:06.019310+00:00 [running]> on host c1c5e41bd973
+[2025-05-21T15:03:10.695+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_gcs_to_bq_loader' AIRFLOW_CTX_TASK_ID='load_payment_type_to_bq' AIRFLOW_CTX_EXECUTION_DATE='2025-05-21T15:03:06.019310+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-21T15:03:06.019310+00:00'
+[2025-05-21T15:03:10.697+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2025-05-21T15:03:14.546+0000] {logging_mixin.py:190} INFO - ✅ Loaded gs://jdeol003-bucket/capstone3_hafizh/taxi_zone_lookup.csv into purwadika.jcdeol3_capstone3_hafizh.taxi_zone
+[2025-05-21T15:03:14.546+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-05-21T15:03:14.557+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2025-05-21T15:03:14.558+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_gcs_to_bq_loader, task_id=load_payment_type_to_bq, run_id=manual__2025-05-21T15:03:06.019310+00:00, execution_date=20250521T150306, start_date=20250521T150310, end_date=20250521T150314
+[2025-05-21T15:03:14.680+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-05-21T15:03:14.695+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-21T15:03:14.741+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,137 @@
+[2025-05-21T14:21:17.851+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-05-21T14:21:17.867+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: extract_concat_upload_to_gcs.run_etl manual__2025-05-21T14:05:46.476128+00:00 [queued]>
+[2025-05-21T14:21:17.874+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: extract_concat_upload_to_gcs.run_etl manual__2025-05-21T14:05:46.476128+00:00 [queued]>
+[2025-05-21T14:21:17.874+0000] {taskinstance.py:2884} INFO - Starting attempt 3 of 4
+[2025-05-21T14:21:17.922+0000] {taskinstance.py:2907} INFO - Executing <Task(PythonOperator): run_etl> on 2025-05-21 14:05:46.476128+00:00
+[2025-05-21T14:21:17.928+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=600) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-21T14:21:17.930+0000] {standard_task_runner.py:72} INFO - Started process 602 to run task
+[2025-05-21T14:21:17.930+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'extract_concat_upload_to_gcs', 'run_etl', 'manual__2025-05-21T14:05:46.476128+00:00', '--job-id', '47', '--raw', '--subdir', 'DAGS_FOLDER/dag_taxi_data_extractor.py', '--cfg-path', '/tmp/tmpm0k070of']
+[2025-05-21T14:21:17.932+0000] {standard_task_runner.py:105} INFO - Job 47: Subtask run_etl
+[2025-05-21T14:21:18.019+0000] {task_command.py:467} INFO - Running <TaskInstance: extract_concat_upload_to_gcs.run_etl manual__2025-05-21T14:05:46.476128+00:00 [running]> on host 939a293d2c0e
+[2025-05-21T14:21:18.126+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='extract_concat_upload_to_gcs' AIRFLOW_CTX_TASK_ID='run_etl' AIRFLOW_CTX_EXECUTION_DATE='2025-05-21T14:05:46.476128+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-21T14:05:46.476128+00:00'
+[2025-05-21T14:21:18.127+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2025-05-21T14:21:18.137+0000] {logging_mixin.py:190} INFO - Base directory path /opt/***
+[2025-05-21T14:21:18.137+0000] {logging_mixin.py:190} INFO - CSV folder path: /opt/***/data/csv
+[2025-05-21T14:21:18.139+0000] {logging_mixin.py:190} INFO - CSV list of files: ['green_tripdata_0.csv', 'green_tripdata_1.csv', 'green_tripdata_10.csv', 'green_tripdata_11.csv', 'green_tripdata_12.csv', 'green_tripdata_13.csv', 'green_tripdata_14.csv', 'green_tripdata_15.csv', 'green_tripdata_16.csv', 'green_tripdata_17.csv', 'green_tripdata_18.csv', 'green_tripdata_19.csv', 'green_tripdata_2.csv', 'green_tripdata_20.csv', 'green_tripdata_21.csv', 'green_tripdata_22.csv', 'green_tripdata_23.csv', 'green_tripdata_24.csv', 'green_tripdata_25.csv', 'green_tripdata_26.csv', 'green_tripdata_27.csv', 'green_tripdata_28.csv', 'green_tripdata_29.csv', 'green_tripdata_3.csv', 'green_tripdata_30.csv', 'green_tripdata_31.csv', 'green_tripdata_32.csv', 'green_tripdata_33.csv', 'green_tripdata_34.csv', 'green_tripdata_35.csv', 'green_tripdata_4.csv', 'green_tripdata_5.csv', 'green_tripdata_6.csv', 'green_tripdata_7.csv', 'green_tripdata_8.csv', 'green_tripdata_9.csv']
+[2025-05-21T14:21:18.140+0000] {logging_mixin.py:190} INFO - Reading CSV files...
+[2025-05-21T14:21:19.158+0000] {logging_mixin.py:190} INFO - Concancenate CSV files...
+[2025-05-21T14:21:19.222+0000] {logging_mixin.py:190} INFO - Base directory path /opt/***
+[2025-05-21T14:21:19.223+0000] {logging_mixin.py:190} INFO - JSON folder path: /opt/***/data/json
+[2025-05-21T14:21:19.226+0000] {logging_mixin.py:190} INFO - JSON list of files: ['green_tripdata_36.json', 'green_tripdata_37.json', 'green_tripdata_38.json', 'green_tripdata_39.json', 'green_tripdata_40.json', 'green_tripdata_41.json', 'green_tripdata_42.json', 'green_tripdata_43.json', 'green_tripdata_44.json', 'green_tripdata_45.json', 'green_tripdata_46.json', 'green_tripdata_47.json', 'green_tripdata_48.json', 'green_tripdata_49.json', 'green_tripdata_50.json', 'green_tripdata_51.json', 'green_tripdata_52.json']
+[2025-05-21T14:21:19.226+0000] {logging_mixin.py:190} INFO - Reading JSON files...
+[2025-05-21T14:21:22.139+0000] {logging_mixin.py:190} INFO - Concancenate JSON files...
+[2025-05-21T14:21:22.159+0000] {logging_mixin.py:190} INFO - Concancenate CSV and JSON files...
+[2025-05-21T14:21:27.706+0000] {logging_mixin.py:190} INFO - Saved combined CSV to /opt/***/data/taxi_data.csv
+[2025-05-21T14:21:27.707+0000] {logging_mixin.py:190} INFO - Uploading taxi_data.csv to gs://jdeol003-bucket/...
+[2025-05-21T14:21:27.749+0000] {taskinstance.py:3336} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/scripts/taxi_data_extractor.py", line 115, in main
+    upload_to_gcs(local_path, gcs_path, gcs_bucket, project_id, credentials_path)
+  File "/opt/airflow/scripts/taxi_data_extractor.py", line 84, in upload_to_gcs
+    blob.upload_from_filename(local_file_path)
+  File "/usr/local/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 3006, in upload_from_filename
+    self._handle_filename_and_upload(
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 2882, in _handle_filename_and_upload
+    with open(filename, "rb") as file_obj:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'taxi_data.csv'
+[2025-05-21T14:21:27.764+0000] {taskinstance.py:1242} INFO - Marking task as UP_FOR_RETRY. dag_id=extract_concat_upload_to_gcs, task_id=run_etl, run_id=manual__2025-05-21T14:05:46.476128+00:00, execution_date=20250521T140546, start_date=20250521T142117, end_date=20250521T142127
+[2025-05-21T14:21:27.833+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2025-05-21T14:21:27.833+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 47 for task run_etl ([Errno 2] No such file or directory: 'taxi_data.csv'; 602)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3029, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 282, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3184, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3208, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/scripts/taxi_data_extractor.py", line 115, in main
+    upload_to_gcs(local_path, gcs_path, gcs_bucket, project_id, credentials_path)
+  File "/opt/airflow/scripts/taxi_data_extractor.py", line 84, in upload_to_gcs
+    blob.upload_from_filename(local_file_path)
+  File "/usr/local/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 3006, in upload_from_filename
+    self._handle_filename_and_upload(
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 2882, in _handle_filename_and_upload
+    with open(filename, "rb") as file_obj:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'taxi_data.csv'
+[2025-05-21T14:21:27.849+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-05-21T14:21:27.865+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-21T14:21:27.903+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-05-21T14:21:27.933+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics

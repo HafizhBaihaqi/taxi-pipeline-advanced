@@ -1,0 +1,55 @@
+[2025-05-20T13:59:33.791+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-05-20T13:59:33.808+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: my_first_dbt_model.dbt_run scheduled__2025-05-19T00:00:00+00:00 [queued]>
+[2025-05-20T13:59:33.813+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: my_first_dbt_model.dbt_run scheduled__2025-05-19T00:00:00+00:00 [queued]>
+[2025-05-20T13:59:33.814+0000] {taskinstance.py:2884} INFO - Starting attempt 6 of 6
+[2025-05-20T13:59:33.860+0000] {taskinstance.py:2907} INFO - Executing <Task(BashOperator): dbt_run> on 2025-05-19 00:00:00+00:00
+[2025-05-20T13:59:33.867+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=78) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-20T13:59:33.868+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'my_first_dbt_model', 'dbt_run', 'scheduled__2025-05-19T00:00:00+00:00', '--job-id', '24', '--raw', '--subdir', 'DAGS_FOLDER/dag_first_model.py', '--cfg-path', '/tmp/tmp16yac9r0']
+[2025-05-20T13:59:33.868+0000] {standard_task_runner.py:72} INFO - Started process 80 to run task
+[2025-05-20T13:59:33.869+0000] {standard_task_runner.py:105} INFO - Job 24: Subtask dbt_run
+[2025-05-20T13:59:33.923+0000] {task_command.py:467} INFO - Running <TaskInstance: my_first_dbt_model.dbt_run scheduled__2025-05-19T00:00:00+00:00 [running]> on host 888ce062ddb5
+[2025-05-20T13:59:34.041+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='my_first_dbt_model' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2025-05-19T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='6' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-19T00:00:00+00:00'
+[2025-05-20T13:59:34.042+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-05-20T13:59:34.043+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-05-20T13:59:34.043+0000] {logging_mixin.py:190} INFO - Current task name:dbt_run state:running start_date:2025-05-20 13:59:33.808590+00:00
+[2025-05-20T13:59:34.043+0000] {logging_mixin.py:190} INFO - Dag name:my_first_dbt_model and current dag run status:running
+[2025-05-20T13:59:34.044+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2025-05-20T13:59:34.045+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-05-20T13:59:34.046+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dbt_modeling && dbt deps --profiles-dir . && dbt clean --profiles-dir . && dbt run -m my_first_dbt_model --profiles-dir .']
+[2025-05-20T13:59:34.057+0000] {subprocess.py:99} INFO - Output:
+[2025-05-20T13:59:50.054+0000] {subprocess.py:106} INFO - [0m13:59:50  Running with dbt=1.9.4
+[2025-05-20T13:59:54.253+0000] {subprocess.py:106} INFO - [0m13:59:54  Warning: No packages were found in packages.yml
+[2025-05-20T13:59:54.259+0000] {subprocess.py:106} INFO - [0m13:59:54  Warning: No packages were found in packages.yml
+[2025-05-20T14:00:03.849+0000] {subprocess.py:106} INFO - [0m14:00:03  Running with dbt=1.9.4
+[2025-05-20T14:00:03.994+0000] {subprocess.py:106} INFO - [0m14:00:03  Checking /opt/***/dbt_modeling/target/*
+[2025-05-20T14:00:04.000+0000] {subprocess.py:106} INFO - [0m14:00:04  Cleaned /opt/***/dbt_modeling/target/*
+[2025-05-20T14:00:04.000+0000] {subprocess.py:106} INFO - [0m14:00:04  Checking /opt/***/dbt_modeling/dbt_packages/*
+[2025-05-20T14:00:04.003+0000] {subprocess.py:106} INFO - [0m14:00:04  Cleaned /opt/***/dbt_modeling/dbt_packages/*
+[2025-05-20T14:00:04.004+0000] {subprocess.py:106} INFO - [0m14:00:04  Finished cleaning all paths.
+[2025-05-20T14:00:07.886+0000] {subprocess.py:106} INFO - [0m14:00:07  Running with dbt=1.9.4
+[2025-05-20T14:00:10.433+0000] {subprocess.py:106} INFO - [0m14:00:10  Registered adapter: bigquery=1.9.1
+[2025-05-20T14:00:10.576+0000] {subprocess.py:106} INFO - [0m14:00:10  Unable to do partial parsing because saved manifest not found. Starting full parse.
+[2025-05-20T14:00:15.180+0000] {subprocess.py:106} INFO - [0m14:00:15  Found 2 models, 4 data tests, 491 macros
+[2025-05-20T14:00:15.182+0000] {subprocess.py:106} INFO - [0m14:00:15
+[2025-05-20T14:00:15.183+0000] {subprocess.py:106} INFO - [0m14:00:15  Concurrency: 1 threads (target='dev')
+[2025-05-20T14:00:15.184+0000] {subprocess.py:106} INFO - [0m14:00:15
+[2025-05-20T14:00:17.609+0000] {subprocess.py:106} INFO - [0m14:00:17  1 of 1 START sql table model jcdeol3_capstone3_hafizh.my_first_dbt_model ....... [RUN]
+[2025-05-20T14:00:21.064+0000] {subprocess.py:106} INFO - [0m14:00:21  1 of 1 OK created sql table model jcdeol3_capstone3_hafizh.my_first_dbt_model .. [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 3.45s]
+[2025-05-20T14:00:21.069+0000] {subprocess.py:106} INFO - [0m14:00:21
+[2025-05-20T14:00:21.070+0000] {subprocess.py:106} INFO - [0m14:00:21  Finished running 1 table model in 0 hours 0 minutes and 5.88 seconds (5.88s).
+[2025-05-20T14:00:21.123+0000] {subprocess.py:106} INFO - [0m14:00:21
+[2025-05-20T14:00:21.124+0000] {subprocess.py:106} INFO - [0m14:00:21  [32mCompleted successfully[0m
+[2025-05-20T14:00:21.125+0000] {subprocess.py:106} INFO - [0m14:00:21
+[2025-05-20T14:00:21.125+0000] {subprocess.py:106} INFO - [0m14:00:21  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[2025-05-20T14:00:22.703+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-05-20T14:00:22.802+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2025-05-20T14:00:22.803+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=my_first_dbt_model, task_id=dbt_run, run_id=scheduled__2025-05-19T00:00:00+00:00, execution_date=20250519T000000, start_date=20250520T135933, end_date=20250520T140022
+[2025-05-20T14:00:22.932+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-05-20T14:00:22.932+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-05-20T14:00:22.933+0000] {logging_mixin.py:190} INFO - Dag name:my_first_dbt_model queued_at:2025-05-20 13:59:29.514419+00:00
+[2025-05-20T14:00:22.933+0000] {logging_mixin.py:190} INFO - Task hostname:888ce062ddb5 operator:BashOperator
+[2025-05-20T14:00:22.972+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-05-20T14:00:22.984+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-20T14:00:23.026+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
