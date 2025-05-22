@@ -79,7 +79,7 @@ x-airflow-common:
     - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
     - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
     - ${AIRFLOW_PROJ_DIR:-.}/dbt_modeling:/opt/airflow/dbt_modeling
-    - ${AIRFLOW_PROJ_DIR:-.}/keys:/opt/airflow/keys/purwadika-key.json
+    - ${AIRFLOW_PROJ_DIR:-.}/keys/purwadika-key.json:/opt/airflow/keys/purwadika-key.json
     - ${AIRFLOW_PROJ_DIR:-.}/dbt_profiles:/root/.dbt
     - ${AIRFLOW_PROJ_DIR:-.}/data:/opt/airflow/data
     - ${AIRFLOW_PROJ_DIR:-.}/scripts:/opt/airflow/scripts
