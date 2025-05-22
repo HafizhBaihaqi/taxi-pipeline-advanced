@@ -1,0 +1,5 @@
+# Ignore secret key file
+secrets.env
+
+# Or ignore a whole folder
+keys/
