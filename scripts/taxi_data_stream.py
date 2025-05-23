@@ -7,7 +7,7 @@ from google.cloud import pubsub_v1
 # GCP config
 project_id = "purwadika"
 topic_id = "capstone3_hafizh_taxi"
-credentials_path = "/app/keys/purwadika-key.json"
+credentials_path = "/opt/airflow/keys/purwadika-key.json"
 
 publisher = pubsub_v1.PublisherClient.from_service_account_file(credentials_path)
 topic_path = publisher.topic_path(project_id, topic_id)

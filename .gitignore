@@ -1,3 +1,5 @@
 keys/purwadika-key.json
 logs/
 *.log
+scripts/__pycache__/
+dags/__pycache__/
