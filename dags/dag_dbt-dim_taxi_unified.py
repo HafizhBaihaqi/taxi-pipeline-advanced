@@ -7,17 +7,17 @@ default_args = {
 }
 
 with DAG(
-    dag_id='dbt-stg_taxi_stream',
+    dag_id='dbt-dim_taxi_unified',
     default_args=default_args,
     schedule_interval='@daily', 
     catchup=False,
     tags=['dbt'],
-    description='dbt run stg_taxi_stream',
+    description='dbt run dim_taxi_unified',
 ) as dag:
 
     dbt_run = BashOperator(
         task_id='dbt_run',
-        bash_command = 'cd /opt/airflow/dbt_modeling && dbt run -m stg_taxi_stream',
+        bash_command = 'cd /opt/airflow/dbt_modeling && dbt run -m dim_taxi_unified',
     )
 
     dbt_run

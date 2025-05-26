@@ -5,3 +5,5 @@ sources:
     tables:
       - name: taxi_streaming
       - name: taxi
+      - name: payment_type
+      - name: taxi_zone

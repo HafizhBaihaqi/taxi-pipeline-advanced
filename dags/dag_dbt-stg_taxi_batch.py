@@ -9,7 +9,7 @@ default_args = {
 with DAG(
     dag_id='dbt-stg_taxi_batch',
     default_args=default_args,
-    schedule_interval='@once', 
+    schedule_interval='@daily', 
     catchup=False,
     tags=['dbt'],
     description='dbt run stg_taxi_batch',
