@@ -4,3 +4,4 @@ sources:
     schema: jcdeol3_capstone3_hafizh
     tables:
       - name: taxi_streaming
+      - name: taxi
