@@ -34,10 +34,10 @@ graph TD
     models --> stg
     models --> mart
     models --> rep
-    script --> taxi_data_extractor.py
-    script --> taxi_data_loader.py
-    script --> taxi_data_stream.py
-    script --> dataflow_pipeline.py
+    scripts --> taxi_data_extractor.py
+    scripts --> taxi_data_loader.py
+    scripts --> taxi_data_stream.py
+    scripts --> dataflow_pipeline.py
 ```
 
 ## How-to
