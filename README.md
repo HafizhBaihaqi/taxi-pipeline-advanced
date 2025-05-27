@@ -107,7 +107,7 @@ root
 5. Make sure to put the service account key in the `/keys` folder
 
 ## How to Execute the Batch Pipeline
-1. Execute `dag_taxi_data_extractor` in Airflow to extract all of the taxi data and upload them to GCS: [jdeol003-bucket/capstone3_hafizh](gs:///jdeol003-bucket/capstone3_hafizh)
+1. Execute `dag_taxi_data_extractor` in Airflow to extract all of the taxi data and upload them to GCS: gs://jdeol003-bucket/capstone3_hafizh
 2. Execute `dag_taxi_data_loader` in Airflow to load all of the taxi data in GCS and load them to BigQuery: `purwadika.jcdeol3_capstone3_hafizh`
 
 ## How to Execute the Stream Pipeline
