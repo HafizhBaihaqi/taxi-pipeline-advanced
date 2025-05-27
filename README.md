@@ -7,6 +7,8 @@ This repository is an advanced version of taxi-pipeline repository for processin
 
 The entire solution is containerized using Docker, ensuring a portable setup.
 
+![Pipeline Architecture](./images/taxi-pipeline-advanced.png)
+
 ## Objective
 - Combine batch an real-time data processing into a single scalable pipeline
 - Utilize Google Cloud services: BigQuery, GCS, Pub/Sub, Dataflow
