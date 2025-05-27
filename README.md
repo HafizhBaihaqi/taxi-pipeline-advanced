@@ -55,6 +55,46 @@ graph TD
     scripts --> dataflow_pipeline.py
 ```
 
+```
+├── dags/
+│ ├── dag_taxi_data_extractor.py
+│ ├── dag_taxi_data_loader.py
+│ ├── dag_dbt-stg_taxi_batch.py
+│ ├── dag_dbt-stg_taxi_stream.py
+│ ├── dag_dbt-stg_taxi_stream-full_refresh.py
+│ ├── dag_dbt-stg_taxi_payment_type.py
+│ ├── dag_dbt-stg_taxi_zone.py
+│ ├── dag_dbt-dim_taxi_unified.py
+│ └── dag_dbt-rep_taxi.py
+├── data/
+│ ├── csv/
+│ │ └── ...csv files
+│ ├── json/
+│ │ └── ...json files
+│ └── ...additional csv files
+├── dbt_modeling/
+│ └── models/
+│ ├── stg/
+│ │ ├── sources.yaml
+│ │ ├── stg_taxi_batch.sql
+│ │ ├── stg_taxi_stream.sql
+│ │ ├── stg_taxi_payment_type.sql
+│ │ └── stg_taxi_zone
+│ ├── mart/
+│ │ └── dim_taxi_unified.sql
+│ └── rep/
+│ └── rep_taxi.sql
+├── scripts/
+│ ├── taxi_data_extractor.py
+│ ├── taxi_data_loader.py
+│ ├── taxi_data_stream.py
+│ └── dataflow_pipeline.py
+├── .env
+├── docker-compose.yaml
+├── Dockerfile
+└── README.md
+```
+
 ## How to Execute the setup Docker
 1. Run `docker-compose build` to build the necessary components and dependencies
 2. Run `docker-compose up` to turn on all of the services
