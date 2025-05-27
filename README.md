@@ -115,10 +115,10 @@ root
 2. Run `docker-compose exec airflow-webserver python /opt/airflow/scripts/dataflow_pipeline.py` to create a subscription and load them using Dataflow to BigQuery: `purwadika.jcdeol3_capstone3_hafizh`
 
 ## How to Execute the Transformation using dbt
-1. Execute `dag_dbt-stg_taxi_batch` in Airflow to create a staging table containing batch data
-2. Execute `dag_dbt-stg_taxi_stream` in Airflow to create a staging table containing stream data. Since the stream table materialization type is incremental, the regular dag will only process latest data. In case full-refresh is needed, execute `dag_dbt-stg_taxi_stream-full_refresh`
-3. Execute `dag_dbt-stg_taxi_payment_type` in Airflow to create a staging table containing taxi payment type data
-4. Execute `dag_dbt-stg_taxi_zone` in Airflow to create a staging table containing taxi zone
-1. Execute `dag_dbt-dim_taxi_unified` in Airflow to create a dimension table containing the combination of batch and stream data
-1. Execute `dag_dbt-rep_taxi` in Airflow to create a report table containing enriched and transformed data
+1. Execute `dbt-stg_taxi_batch` in Airflow to create a staging table containing batch data
+2. Execute `dbt-stg_taxi_stream` in Airflow to create a staging table containing stream data. Since the stream table materialization type is incremental, the regular dag will only process latest data. In case full-refresh is needed, execute `dag_dbt-stg_taxi_stream-full_refresh`
+3. Execute `dbt-stg_taxi_payment_type` in Airflow to create a staging table containing taxi payment type data
+4. Execute `dbt-stg_taxi_zone` in Airflow to create a staging table containing taxi zone
+1. Execute `dbt-dim_taxi_unified` in Airflow to create a dimension table containing the combination of batch and stream data
+1. Execute `dbt-rep_taxi` in Airflow to create a report table containing enriched and transformed data
 
