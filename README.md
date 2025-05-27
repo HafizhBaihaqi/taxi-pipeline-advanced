@@ -100,11 +100,11 @@ root
 ```
 
 ## How to Execute the setup Docker
-1. Run `docker-compose build` to build the necessary components and dependencies
-2. Run `docker-compose up` to turn on all of the services
-3. Run `docker-compose ps -a` to check the status of each of the service
-4. Once the airflow-webservice is up, go to http://localhost:8080/ to open Apache Airflow
-5. Make sure to put the service account key in the `/keys` folder
+1. Make sure to put the service account key in the `/keys` folder since it is not included in the repository
+2. Run `docker-compose build` to build the necessary components and dependencies
+3. Run `docker-compose up` to turn on all of the services
+4. Run `docker-compose ps -a` to check the status of each of the service
+5. Once the airflow-webservice is up, go to http://localhost:8080/ to open Apache Airflow
 
 ## How to Execute the Batch Pipeline
 1. Execute `dag_taxi_data_extractor` in Airflow to extract all of the taxi data and upload them to GCS: gs://jdeol003-bucket/capstone3_hafizh
