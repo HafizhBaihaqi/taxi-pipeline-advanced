@@ -1,4 +1,4 @@
-# Advance Taxi Pipeline
+# Advanced Taxi Pipeline
 
 ## Description
 This repository is an advanced version of taxi-pipeline repository for processing taxi trip data from two sources with each using different approach:
