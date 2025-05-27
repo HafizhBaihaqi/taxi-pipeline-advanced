@@ -14,12 +14,14 @@ The entire solution is containerized using Docker, ensuring a portable setup.
 - Portable deployment with Docker containerization
 
 ## Folder Structure
+### Graph TD
 ```mermaid
 graph TD
     Root --> dags
     Root --> data
     Root --> dbt_modeling
     Root --> scripts
+    Root --> keys
     Root --> .env
     Root --> docker-compose.yaml
     Root --> Dockerfile
@@ -54,8 +56,9 @@ graph TD
     scripts --> taxi_data_stream.py
     scripts --> dataflow_pipeline.py
 ```
-
+### Tree
 ```
+root
 ├── dags/
 │ ├── dag_taxi_data_extractor.py
 │ ├── dag_taxi_data_loader.py
@@ -74,21 +77,22 @@ graph TD
 │ └── ...additional csv files
 ├── dbt_modeling/
 │ └── models/
-│ ├── stg/
-│ │ ├── sources.yaml
-│ │ ├── stg_taxi_batch.sql
-│ │ ├── stg_taxi_stream.sql
-│ │ ├── stg_taxi_payment_type.sql
-│ │ └── stg_taxi_zone
-│ ├── mart/
-│ │ └── dim_taxi_unified.sql
-│ └── rep/
-│ └── rep_taxi.sql
+│  ├── stg/
+│  │ ├── sources.yaml
+│  │ ├── stg_taxi_batch.sql
+│  │ ├── stg_taxi_stream.sql
+│  │ ├── stg_taxi_payment_type.sql
+│  │ └── stg_taxi_zone
+│  ├── mart/
+│  │ └── dim_taxi_unified.sql
+│  └── rep/
+│    └── rep_taxi.sql
 ├── scripts/
 │ ├── taxi_data_extractor.py
 │ ├── taxi_data_loader.py
 │ ├── taxi_data_stream.py
 │ └── dataflow_pipeline.py
+├── keys
 ├── .env
 ├── docker-compose.yaml
 ├── Dockerfile
@@ -100,6 +104,7 @@ graph TD
 2. Run `docker-compose up` to turn on all of the services
 3. Run `docker-compose ps -a` to check the status of each of the service
 4. Once the airflow-webservice is up, go to http://localhost:8080/ to open Apache Airflow
+5. Make sure to put the service account key in the `/keys` folder
 
 ## How to Execute the Batch Pipeline
 1. Execute `dag_taxi_data_extractor` in Airflow to extract all of the taxi data and upload them to GCS: gs:///jdeol003-bucket/capstone3_hafizh
