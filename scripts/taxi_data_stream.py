@@ -12,6 +12,7 @@ credentials_path = "/opt/airflow/keys/purwadika-key.json"
 publisher = pubsub_v1.PublisherClient.from_service_account_file(credentials_path)
 topic_path = publisher.topic_path(project_id, topic_id)
 
+# Generate dummy data based on the actual taxi data
 def generate_dummy_taxi_data():
     pickup = datetime.utcnow() - timedelta(minutes=random.randint(1, 60))
     dropoff = pickup + timedelta(minutes=random.randint(1, 30))
@@ -40,6 +41,7 @@ def generate_dummy_taxi_data():
     }
     return data
 
+# Publish
 def publish():
     while True:
         message = json.dumps(generate_dummy_taxi_data()).encode("utf-8")

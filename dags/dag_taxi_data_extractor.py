@@ -14,11 +14,11 @@ default_args = {
 }
 
 with DAG(
-    dag_id='extract_concat_upload_to_gcs',
+    dag_id='dag_taxi_data_extractor',
     default_args=default_args,
     description='Extract Taxi and supporting files and upload to GCS: gs:///jdeol003-bucket/capstone3_hafizh',
     start_date=datetime(2025, 5, 21),
-    schedule_interval='@daily',
+    schedule_interval='@once',
     catchup=False,
     tags=['local_to_gcs']
 ) as dag:

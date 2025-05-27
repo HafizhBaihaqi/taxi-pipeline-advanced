@@ -2,7 +2,7 @@ import apache_beam as beam
 import json
 from apache_beam.options.pipeline_options import PipelineOptions
 
-# Pub/Sub subscription and BigQuery table
+# Pub/Sub subscription and BigQuery output table
 INPUT_SUBSCRIPTION = "projects/purwadika/subscriptions/capstone3_hafizh_taxi-sub"
 OUTPUT_TABLE = "purwadika:jcdeol3_capstone3_hafizh.taxi_streaming"
 
@@ -18,6 +18,7 @@ beam_options_dict = {
 }
 beam_options = PipelineOptions.from_dictionary(beam_options_dict)
 
+# Define schema
 BQ_SCHEMA = (
     "VendorID:INTEGER,"
     "lpep_pickup_datetime:TIMESTAMP,"
