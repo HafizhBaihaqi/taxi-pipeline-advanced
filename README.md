@@ -5,7 +5,7 @@ This repository is an advanced version of taxi-pipeline repository for processin
 1. Batch Pipeline: Process taxi trip data from taxi-pipeline repository using Python scripts to extract and unify both from CSV and JSON files, and upload the files to *Google Cloud Storage (GCS)* then load them into *BigQuery*. Apache Airflow is used to orchestrates and automates these steps.
 2. Streaming Pipeline: Simulates real-time taxi data generated using a Python script to act as a dummy data, which then use a Python that acts as a Publisher which sends messages to *Google Pub/Sub* and *Google Dataflow* to process and loads the data into *BigQuery*.
 
-Both of the data will be combined and transform using dbt within BigQuery.
+Both of the data will be combined and transformed using dbt within BigQuery.
 
 The entire solution is containerized using Docker, ensuring a portable setup.
 ![Pipeline Architecture](./images/taxi-pipeline-advanced.png)
