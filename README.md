@@ -125,3 +125,12 @@ root
 1. Execute `dbt-dim_taxi_unified` in Airflow to create a dimension table containing the combination of batch and stream data
 1. Execute `dbt-rep_taxi` in Airflow to create a report table containing enriched and transformed data
 
+
+Links:
+- [Bucket](https://console.cloud.google.com/storage/browser/jdeol003-bucket/capstone3_hafizh)
+- BigQuery Dataset: purwadika.jcdeol3_capstone3_hafizh
+- [Pub/Sub](https://console.cloud.google.com/cloudpubsub/topic/detail/capstone3_hafizh_taxi)
+- [Dataflow](https://console.cloud.google.com/dataflow/jobs/us-east1/2025-05-23_08_13_10-18217434016372225853?authuser=0&inv=1&invt=AbywUg&project=purwadika)
+
+
+
